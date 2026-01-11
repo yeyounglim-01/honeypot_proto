@@ -48,3 +48,45 @@
 ├── backend/              # FastAPI, Azure SDK (API & Auth)
 ├── core/                 # RAG & LLM Logic (GPT-4o, Gemini Strategy)
 └── infra/                # Azure Resource Templates (Key Vault, AI Search)
+
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* **Node.js**: 18.x 이상
+* **Python**: 3.10 이상
+
+### Installation & Execution
+
+1. **Repository Clone**
+```bash
+git clone https://github.com/your-repo/honeypot.git
+cd honeypot
+
+```
+
+
+2. **Frontend Setup**
+```bash
+cd frontend
+npm install
+npm run dev
+
+```
+
+
+3. **Documentation**: Detailed environment settings can be found in `README_Technical.md`.
+
+---
+
+## 💡 Reflection
+
+이번 프로젝트는 인수인계 프로세스에서 **사용자 친화적인 인터페이스의 중요성**을 깊이 체감한 소중한 경험이었습니다. 2주라는 짧은 기간 내에 복잡한 비즈니스 로직을 깔끔한 UI로 녹여내고, 인계자와 인수자 모두에게 필요한 기능을 MVP(최소 기능 제품) 형태로 구현하는 데 집중했습니다.
+
+특히 데이터 추가부터 인덱스 선택, 보고서 생성, 챗봇 대화로 이어지는 전체 흐름이 자연스럽게 유도되도록 UX를 설계하며 **'AI 결과물을 어떻게 신뢰 가능한 데이터로 전환할 것인가'** 를 치열하게 고민했습니다. 팀원들과 함께 '개인의 경험을 조직의 자산으로' 만드는 가치를 기술로 증명할 수 있었던 뜻깊은 여정이었습니다. 함께해준 팀원분들께 진심으로 감사드립니다! 🍯🐝
+
+```
