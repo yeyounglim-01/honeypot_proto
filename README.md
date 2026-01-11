@@ -27,7 +27,7 @@
 저는 프로젝트의 프론트엔드 아키텍처를 설계하고, **복잡한 AI 프로세스를 사용자 중심의 직관적인 워크플로우로 전환**하는 데 주력했습니다.
 
 ### ✅ 전문 인수인계 워크플로우 고도화 (Workflow Optimization)
-* **기능적 모듈 분리**: 기존의 단순 챗봇 UI를 **[전문 리포트 생성 존]**과 **[채팅 세션 관리 존]**으로 분리하여 비즈니스 전문성 강화.
+* **기능적 모듈 분리**: 기존의 단순 챗봇 UI를 **[전문 리포트 생성 존]** 과 **[채팅 세션 관리 존]** 으로 분리하여 비즈니스 전문성 강화.
 * **Interactive Editing UI**: AI가 생성한 초안을 사용자가 실시간으로 검토 및 수정/추가할 수 있는 인터페이스를 구현하여 최종 문서의 무결성 보장.
 * **Approval Process Implementation**: 실무 프로세스를 반영하여 인계자/인수자 및 **최종 매니저 승인 서명란**을 추가, 신뢰 기반의 문서화 완료.
 
@@ -42,12 +42,23 @@
 ---
 
 ## 📂 Project Structure
+
 ```text
-.
-├── frontend/             # React, TypeScript, Vite (UI/UX Logic)
-├── backend/              # FastAPI, Azure SDK (API & Auth)
-├── core/                 # RAG & LLM Logic (GPT-4o, Gemini Strategy)
-└── infra/                # Azure Resource Templates (Key Vault, AI Search)
+honeypot_proto/
+├── app/                         # 백엔드 FastAPI 애플리케이션
+│   ├── main.py                  # FastAPI 앱 진입점
+│   ├── auth.py                  # JWT 인증 미들웨어
+│   ├── routers/                 # API 라우터 (Auth, Upload, Chat)
+│   └── services/                # 비즈니스 로직 (LLM, Blob, Search 연동)
+├── frontend/                    # 프론트엔드 React 애플리케이션 (Vite)
+│   ├── src/
+│   │   ├── components/          # UI 컴포넌트 (Login, Sidebar, Form, Chat)
+│   │   ├── services/            # API 통신 모듈 (Axios)
+│   │   └── types.ts             # TypeScript 타입 정의
+│   ├── package.json             # NPM 의존성 관리
+│   └── vite.config.ts           # Vite 빌드 설정
+├── requirements.txt             # Python 의존성 관리
+└── README.md                    # 프로젝트 문서
 
 ```
 
@@ -64,7 +75,7 @@
 
 1. **Repository Clone**
 ```bash
-git clone https://github.com/your-repo/honeypot.git
+git clone https://github.com/your-org/honeypot_proto.git
 cd honeypot
 
 ```
